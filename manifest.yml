@@ -1,0 +1,13 @@
+---
+applications:
+- name: pcf-phd-spring-cloud
+  memory: 512M
+  instances: 1
+  host: pcf-phd-spring-cloud
+  domain: rock.music.cf-app.com 
+  path: target/pcf-phd-spring-cloud-0.0.1-SNAPSHOT.jar
+  services:
+    - XDTest
+  env:
+    SPRING_PROFILES_DEFAULT: cloud
+
